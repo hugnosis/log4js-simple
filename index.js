@@ -118,26 +118,6 @@ function _log(level, prefix, args) {
 }
 
 /**
- * Left padding
- * @param str
- * @param len
- * @param pad
- * @returns {*}
- * @private
- */
-function _lpad (str, len=1, pad='0') {
-  str = str.toString();
-  if (str.length >= len) return str;
-
-  var prefix = pad;
-  for (var i = 1; i < len; i++) {
-    prefix += pad;
-  }
-
-  return prefix.substring(0, prefix.length - str.length) + str;
-}
-
-/**
  * Module exports.
  */
 module.exports = Log();
