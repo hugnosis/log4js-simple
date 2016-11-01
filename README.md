@@ -1,6 +1,6 @@
 # log4js-simple
 
-## Syntax
+## Usage 
 ```js
 var log = require('log4js-simple');
 
@@ -20,8 +20,19 @@ log.level = 3; // INFO;
 
 ## Change Levels
 ```js
-var levels = ['ALL', 'TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FATAL', 'OFF'];
-log.setLevels(levels, [level=3 [, displayCallstackLevel=4 [, displayErrorLevel=5]);
+var levels = ['ALL', 'ERROR', 'TEST'];
+log.setLevels(levels, [level=0 [, displayCallstackLevel=1 [, displayErrorLevel=1]);
+
+log.all('all message');
+log.error('error message');
+log.test('test message');
+```
+
+## Change prefix
+```js
+log.prefix = function(level) {
+  return '[TEST PREFIX] ';
+}
 ```
 
 ## Installation

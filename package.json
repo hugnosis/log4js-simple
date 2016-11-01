@@ -2,7 +2,7 @@
   "name": "log4js-simple",
   "description": "Simple log",
   "repository": "hugnosis/log4js-simple",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "log"
   ],
