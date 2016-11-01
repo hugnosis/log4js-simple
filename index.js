@@ -90,9 +90,9 @@ Log.prototype.prefix = function (level) {
  */
 function _wrapper(level) {
   if (level < _LEVEL)
-    return () => {};
+    return function () {};
   else
-    return (...args) => { _log(level, this.prefix(level), args) };
+    return function (...args) { _log(level, this.prefix(level), args) };
 }
 
 /**
