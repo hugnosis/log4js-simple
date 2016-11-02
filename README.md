@@ -15,15 +15,16 @@ log.fatal('Hello %s', world);
 
 ## Change Level
 ```js
+/** ['ALL', 'TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FATAL', 'OFF'] */
 log.level = 3; // INFO;
 ```
 
 ## Change Levels
 ```js
-var levels = ['ALL', 'ERROR', 'TEST'];
-log.setLevels(levels, [level=0 [, displayCallstackLevel=1 [, displayErrorLevel=1]);
+var levels = ['ALL', 'ERROR', 'TEST', 'OFF'];
+log.setLevels(levels, [level=1 [, displayCallstackLevel=1 [, displayErrorLevel=1]);
 
-log.all('all message');
+log.all('all message'); // Not display
 log.error('error message');
 log.test('test message');
 ```
@@ -31,7 +32,7 @@ log.test('test message');
 ## Change prefix
 ```js
 log.prefix = function(level) {
-  return '[TEST PREFIX] ';
+  return (new Date()).toISOString() + ' ' + _LEVELS[level];
 }
 ```
 
