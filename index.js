@@ -92,7 +92,7 @@ function _wrapper(level) {
   if (level < _LEVEL)
     return function () {};
   else
-    return function (...args) { _log(level, this.prefix(level), args) };
+    return function () { _log(level, this.prefix(level), Array.prototype.slice.call(arguments)) };
 }
 
 /**
