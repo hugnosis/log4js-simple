@@ -1,5 +1,7 @@
 # log4js-simple
 
+[![NPM](https://nodei.co/npm/log4js-simple.png?downloads=true)](https://nodei.co/npm/log4js-simple/)
+
 ## Usage 
 ```js
 var log = require('log4js-simple');
