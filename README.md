@@ -34,7 +34,7 @@ log.test('test message');
 ## Change prefix
 ```js
 log.prefix = function(level) {
-  return (new Date()).toISOString() + ' ' + _LEVELS[level];
+  return (new Date()).toISOString() + ' ' + levels[level];
 }
 ```
 
