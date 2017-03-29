@@ -34,12 +34,12 @@ log.test('test message');
 ## Change prefix
 ```js
 log.prefix = function(level) {
-  /** 2016-11-03T08:39:35.943Z INFO test message */
+  /** 2016-11-03T08:39:35.943Z INFO */
   return (new Date()).toISOString() + ' ' + levels[level];
 }
 ```
 
 ## Installation
 ```js
-$ npm install log4js-simple
+$ npm i log4js-simple
 ```
