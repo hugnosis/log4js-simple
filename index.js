@@ -105,7 +105,7 @@ function _wrapper(level) {
 function _log(level, prefix, args) {
   /** callstack */
   if (_DISPLAY_CALLSTACK_LEVEL <= level) {
-    if (! args.some(function(elem) { return elem instanceof Error; })) {
+    if (! args.some(function(elem) { return (elem instanceof Error) && elem.stack; })) {
       args.push('\n' + Error('dummy').stack.split('\n').slice(4).join('\n'));
     }
   }
