@@ -89,10 +89,11 @@ Log.prototype.prefix = function (level) {
  * @private
  */
 function _wrapper(level) {
+  var self = this;
   if (level < _LEVEL)
     return function () {};
   else
-    return function () { _log(level, this.prefix(level), Array.prototype.slice.call(arguments)) };
+    return function () { _log(level, self.prefix(level), Array.prototype.slice.call(arguments)) };
 }
 
 /**
