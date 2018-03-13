@@ -23,7 +23,7 @@ log.level = 3; // INFO;
 
 ## Change Levels
 ```js
-var levels = ['OFF', 'ALL', 'WARN', 'ERROR'];
+var levels = ['ALL', 'INFO', 'WARN', 'ERROR'];
 log.setLevels(levels [, level=2 [, displayCallstackLevel=2 [, displayErrorLevel=3]);
 
 log.all('all message'); // Not display
